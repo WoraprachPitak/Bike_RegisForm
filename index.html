@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>แบบลงทะเบียนพนักงาน ClaimDi Bike</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <div>
+            <form>
+                <div class="container">
+                    <div class="header">
+                      <h2>แบบลงทะเบียนพนักงาน ClaimDi Bike</h2>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ชื่อ-นามสกุลภาษาไทย <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-4">
+                              <label class="form-label" for="nameTH"> ชื่อ </label>
+                                <input type="text" class="form-control" id="nameTH" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="form-label" for="surnameTH"> นามสกุล </label>
+                              <input type="text" class="form-control" id="surnameTH" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ชื่อ-นามสกุลภาษาอังกฤษ <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="form-label" for="nameTH"> ชื่อ </label>
+                              <input type="text" class="form-control" id="nameEN" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="form-label" for="surnameTH"> นามสกุล </label>
+                              <input type="text" class="form-control" id="surnameEN" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ชื่อเล่น</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="nickname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>เพศ <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <select class="selectpicker" required id="gender">
+                                <option disabled selected value> -- กรุณาเลือก -- </option>
+                                    <option value="ชาย">ชาย</option>
+                                    <option value="หญิง">หญิง</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>อายุ/ปี <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="number" class="form-control" id="age" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>เลขบัตรประจำตัวประชาชน <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="personID" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ชื่อ - สกุลเดิม (ถ้ามี)</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="oldname">
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ที่อยู่ปัจจุบัน <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <textarea class="form-control" rows="5" id="address" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>จังหวัด <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <select class="selectpicker" id="province" required>
+                                <option disabled selected value> -- กรุณาเลือก -- </option>
+                                    <option value="กระบี่">กระบี่</option>
+                                    <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                                    <option value="กาญจนบุรี">กาญจนบุรี</option>
+                                    <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+                                    <option value="กำแพงเพชร">กำแพงเพชร</option>
+                                    <option value="ขอนแก่น">ขอนแก่น</option>
+                                    <option value="จันทบุรี">จันทบุรี</option>
+                                    <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+                                    <option value="ชลบุรี">ชลบุรี</option>
+                                    <option value="ชัยนาท">ชัยนาท</option>
+                                    <option value="ชัยภูมิ">ชัยภูมิ</option>
+                                    <option value="ชุมพร">ชุมพร</option>
+                                    <option value="ตรัง">ตรัง</option>
+                                    <option value="ตราด">ตราด</option>
+                                    <option value="ตาก">ตาก</option>
+                                    <option value="นครนายก">นครนายก</option>
+                                    <option value="นครปฐม">นครปฐม</option>
+                                    <option value="นครพนม">นครพนม</option>
+                                    <option value="นครราชสีมา">นครราชสีมา</option>
+                                    <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+                                    <option value="นครสวรรค์">นครสวรรค์</option>
+                                    <option value="นนทบุรี">นนทบุรี</option>
+                                    <option value="นราธิวาส">นราธิวาส</option>
+                                    <option value="น่าน">น่าน</option>
+                                    <option value="บึงกาฬ">บึงกาฬ</option>
+                                    <option value="บุรีรัมย์">บุรีรัมย์</option>
+                                    <option value="ปทุมธานี">ปทุมธานี</option>
+                                    <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+                                    <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+                                    <option value="ปัตตานี">ปัตตานี</option>
+                                    <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+                                    <option value="พะเยา">พะเยา</option>
+                                    <option value="พังงา">พังงา</option>
+                                    <option value="พัทลุง">พัทลุง</option>
+                                    <option value="พิจิตร">พิจิตร</option>
+                                    <option value="พิษณุโลก">พิษณุโลก</option>
+                                    <option value="ภูเก็ต">ภูเก็ต</option>
+                                    <option value="มหาสารคาม">มหาสารคาม</option>
+                                    <option value="มุกดาหาร">มุกดาหาร</option>
+                                    <option value="ยะลา">ยะลา</option>
+                                    <option value="ยโสธร">ยโสธร</option>
+                                    <option value="ระนอง">ระนอง</option>
+                                    <option value="ระยอง">ระยอง</option>
+                                    <option value="ราชบุรี">ราชบุรี</option>
+                                    <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+                                    <option value="ลพบุรี">ลพบุรี</option>
+                                    <option value="ลำปาง">ลำปาง</option>
+                                    <option value="ลำพูน">ลำพูน</option>
+                                    <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                                    <option value="สกลนคร">สกลนคร</option>
+                                    <option value="สงขลา">สงขลา</option>
+                                    <option value="สตูล">สตูล</option>
+                                    <option value="สมุทรปราการ">สมุทรปราการ</option>
+                                    <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+                                    <option value="สมุทรสาคร">สมุทรสาคร</option>
+                                    <option value="สระบุรี">สระบุรี</option>
+                                    <option value="สระแก้ว">สระแก้ว</option>
+                                    <option value="สิงห์บุรี">สิงห์บุรี</option>
+                                    <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+                                    <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+                                    <option value="สุรินทร์">สุรินทร์</option>
+                                    <option value="สุโขทัย">สุโขทัย</option>
+                                    <option value="หนองคาย">หนองคาย</option>
+                                    <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+                                    <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+                                    <option value="อุดรธานี">อุดรธานี</option>
+                                    <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+                                    <option value="อุทัยธานี">อุทัยธานี</option>
+                                    <option value="อุบลราชธานี">อุบลราชธานี</option>
+                                    <option value="อ่างทอง">อ่างทอง</option>
+                                    <option value="เชียงราย">เชียงราย</option>
+                                    <option value="เชียงใหม่">เชียงใหม่</option>
+                                    <option value="เพชรบุรี">เพชรบุรี</option>
+                                    <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+                                    <option value="เลย">เลย</option>
+                                    <option value="แพร่">แพร่</option>
+                                    <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>เบอร์โทรศัพท์ <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>อีเมลล์ (Email)</label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="email" class="form-control" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ID Line <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ประเภทใบขับขี่</label>
+                            </div>
+                            <div class="col-sm-8">
+                              <select class="selectpicker" name="license">
+                                <option disabled selected value> -- กรุณาเลือก -- </option>
+                                    <option value="ใบอนุญาตขับรถชนิดชั่วคราว">ใบอนุญาตขับรถชนิดชั่วคราว</option>
+                                    <option value="ใบอนุญาตขับรถยนต์ส่วนบุคคล">ใบอนุญาตขับรถยนต์ส่วนบุคคล</option>
+                                    <option value="ใบอนุญาตขับรถยนต์สามล้อส่วนบุคคล">ใบอนุญาตขับรถยนต์สามล้อส่วนบุคคล</option>
+                                    <option value="ใบอนุญาตขับรถยนต์สาธารณะ">ใบอนุญาตขับรถยนต์สาธารณะ</option>
+                                    <option value="ใบอนุญาตขับรถยนต์สามล้อสาธารณะ">ใบอนุญาตขับรถยนต์สามล้อสาธารณะ</option>
+                                    <option value="ใบอนุญาตขับรถจักรยานยนต์ส่วนบุคคล">ใบอนุญาตขับรถจักรยานยนต์ส่วนบุคคล</option>
+                                    <option value="ใบอนุญาตขับรถจักรยานยนต์สาธารณะ">ใบอนุญาตขับรถจักรยานยนต์สาธารณะ</option>
+                                    <option value="ใบอนุญาตขับรถบดถนน">ใบอนุญาตขับรถบดถนน</option>
+                                    <option value="ใบอนุญาตขับรถแทร็คเตอร์">ใบอนุญาตขับรถแทร็คเตอร์</option>
+                                    <option value="ใบอนุญาตขับรถชนิดอื่นๆ นอกจากข้อ 1-9">ใบอนุญาตขับรถชนิดอื่นนอกจาก (1) ถึง (9)</option>
+                                    <option value="ใบอนุญาตขับรถตามความตกลงระหว่างประเทศที่ประเทศไทยเป็นภาคี">ใบอนุญาตขับรถตามความตกลงระหว่างประเทศที่ประเทศไทยเป็นภาคี</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>รถที่ใช้งาน</label>
+                          </div>
+                          <div class="col-sm-8">
+                              <div class="radio">
+                                <label><input type="radio" name="vehicle">รถยนต์</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="vehicle">รถจักรยานยนต์</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="vehicle">รถยนต์ และ รถจักรยานยนต์</label>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ยี่ห้อ/รุ่น</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>เลข IMEI (กด *#06#)</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>พื้นที่ประสงค์รับงาน <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ภูมิภาคที่มีความประสงค์รับงาน <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <div class="radio">
+                                <label><input type="radio" name="part" required>กรุงเทพและปริมณฑล</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="part">ภาคกลาง</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="part">ภาคเหนือ</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="part">ภาคใต้</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="part">ภาคอีสาน</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="part">ภาคตะวันตก</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="part">ภาคตะวันออก</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="part">อื่นๆ :</label>
+                                <input type="text" class="form-control" id="">
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>วันเวลา/เวลาที่สะดวกรับงาน <font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>บัญชีธนาคาร/ชื่อบัญชี /เลขบัญชี /ธนาคาร</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>บุคคลที่ติดต่อได้กรณีเกิดเหตุฉุกเฉิน<font color="red">*</font></label>
+                            </div>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>ประวัติการทำงาน (ถ้ามี)</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" rows="5" id=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <input type="submit">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
